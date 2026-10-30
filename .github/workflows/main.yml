@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+name: Simple Build and Deploy
+=======
+name: Deploy HTML Site
+>>>>>>> dbb4d17 (Deploy HTML site)
+=======
+name: HTML CI/CD
+>>>>>>> ad05779 (Updated github action)
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    - name: Build Step
+      run: echo "Building..."
+
+    - name: Upload Files
+=======
+    - name: Upload Site
+>>>>>>> dbb4d17 (Deploy HTML site)
+=======
+    # 🔹 Simple Build (just for demo)
+    - name: Build Step
+      run: echo "HTML Build Completed"
+
+    # 🔹 Upload HTML files
+    - name: Upload Files
+>>>>>>> ad05779 (Updated github action)
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: .
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    - name: Deploy to Pages
+      uses: actions/deploy-pages@v4
+=======
+=======
+    # 🔹 Deploy
+>>>>>>> ad05779 (Updated github action)
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
+>>>>>>> dbb4d17 (Deploy HTML site)
